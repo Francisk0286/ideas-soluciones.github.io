@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="icon" type="image/gif" href="img/general/S.i.s_pequeno.png"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Cotizador CONTPAQi</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config: palette -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandGray50: '#0001FB',
+            brandGray100: '#f5f5f5',
+            brandGray200: '#e5e5e5',
+            brandGray300: '#d4d4d4',
+            brandGray400: '#a3a3a3',
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <style>
+    /* Variables para modo claro/oscuro (se alternan con JS) */
+    :root {
+      --bg: #ffffff; /* brandGray50 */
+      --surface: #0C60B6;
+      --text: #000000; /* gray-900 */
+      --muted: #ffffff; /* gray-500 */
+      --accent: #ffffff; /* primary color (will switch) */
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .surface {
+      background: var(--surface);
+    }
+
+    .muted { color: var(--muted); }
+    .accent { color: var(--accent); }
+
+    /* Simple slider styles */
+    .carousel { position: relative; overflow: hidden; }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.6s ease;
+      will-change: transform;
+    }
+    .carousel-item { min-width: 100%; flex-shrink: 0; }
+    /* Remove any blurring overlay — images shown raw */
+    .hero-img { width:100%; height:420px; object-fit:cover; display:block; }
+
+    /* gallery hover */
+    .gallery-item { transition: transform .18s ease; }
+    .gallery-item:hover { transform: scale(1.03); }
+
+    /* simple modal */
+    .modal { transition: all .18s ease; }
+    
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #ffffff;
+        font-family: Arial, sans-serif;
+    }
+
+    
+
+    .cotizador-container {
+        width: 100%;
+        height: calc(100% - 90px);
+        position: relative;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .btn-cotizador {
+    background: #041861;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    position: absolute;
+    right: 20px; /* Ajusta */
+    top: 4%;
+    transform: translateY(-50%);
+    }
+
+    .btn-cotizador:hover {
+    background: #0dbaf4;
+    }
+
+</style>
+</head>
+
+<body>
+    <div class="header-space"></div>
+    <nav class="surface shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <img src="img/general/Logo2017.png" style="float:left" height="100" width="100"></img>
+      <div class="flex items-center gap-3">
+        </div>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" a href="#inicio" class="muted hover:underline">Inicio</a>
+        <a href="index.html" a href="#nosotros" class="muted hover:underline">Nosotros</a>
+        <a href="index.html" a href="#evento" class="muted hover:underline">Evento</a>
+        <a href="index.html" a href="#galeria" class="muted hover:underline">Servicios</a>
+        <a href="index.html" a href="#correo" class="muted hover:underline">Correo</a>
+        <a href="index.html" a href="#visitanos" class="muted hover:underline">Visítanos</a>
+        <a href="cotizador.html" class="btn-cotizador">Cotizador</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+      </div>
+    </div>
+  </nav>
+</header>
+    <div class="cotizador-container">
+        <iframe src="https://servicios.contpaqi.com/App/OnLineSell/cotizador-en-linea.aspx"></iframe>
+    </div>
+
+</body>
+</html>

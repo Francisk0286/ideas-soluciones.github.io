@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="icon" type="image/gif" href="img/general/s.i.s_pequeno.png"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>CONTPAQi Colabora</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config: palette -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandGray50: '#0001FB',
+            brandGray100: '#f5f5f5',
+            brandGray200: '#e5e5e5',
+            brandGray300: '#d4d4d4',
+            brandGray400: '#a3a3a3',
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <style>
+    /* Variables para modo claro/oscuro (se alternan con JS) */
+    :root {
+      --bg: #ffffff; /* brandGray50 */
+      --surface: #0C60B6;
+      --text: #000000; /* gray-900 */
+      --muted: #ffffff; /* gray-500 */
+      --accent: #ffffff; /* primary color (will switch) */
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .surface {
+      background: var(--surface);
+    }
+
+    .muted { color: var(--muted); }
+    .accent { color: var(--accent); }
+
+    /* Simple slider styles */
+    .carousel { position: relative; overflow: hidden; }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.6s ease;
+      will-change: transform;
+    }
+    .carousel-item { min-width: 100%; flex-shrink: 0; }
+    /* Remove any blurring overlay — images shown raw */
+    .hero-img { width:100%; height:420px; object-fit:cover; display:block; }
+
+    /* gallery hover */
+    .gallery-item { transition: transform .18s ease; }
+    .gallery-item:hover { transform: scale(1.03); }
+
+    /* simple modal */
+    .modal { transition: all .18s ease; }
+    
+    .cotizador-container {
+        width: 100%;
+        height: calc(100% - 90px);
+        position: relative;
+    }
+
+    .btn-cotizador {
+    background: #041861;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    position: absolute;
+    right: 20px; /* Ajusta */
+    top: 4%;
+    transform: translateY(-50%);
+    }
+
+    .btn-cotizador:hover {
+    background: #0dbaf4;
+    }
+
+    .iframe-video {
+    position: relative;
+    width: 100%;
+    height: 315px;  /* o usa responsive con tailwind */
+    border: none;
+    }
+
+
+
+</style>
+</head>
+<body data-theme="light" class="antialiased">
+
+  <!-- NAV -->
+  <nav class="surface shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <img src="img/general/logo2017.png" style="float:left" height="100" width="100"></img>
+      <div class="flex items-center gap-3">
+        </div>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" a href="#inicio" class="muted hover:underline">Inicio</a>
+        <a href="index.html" a href="#nosotros" class="muted hover:underline">Nosotros</a>
+        <a href="index.html" a href="#evento" class="muted hover:underline">Evento</a>
+        <a href="index.html" a href="#galeria" class="muted hover:underline">Servicios</a>
+        <a href="index.html" a href="#correo" class="muted hover:underline">Correo</a>
+        <a href="index.html" a href="#visitanos" class="muted hover:underline">Visítanos</a>
+        <a href="cotizador.html" a href="#cotizador" class="btn-cotizador">Cotizador</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <main class="max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-6">
+    <div>
+      <img src="img/gallery-items/Colabora2.png" class="w-full rounded shadow" alt="ITEM_IMAGE">
+      <h2 class="text-2xl font-bold mt-4">CONTPAQi Colabora</h2>
+      <p class="muted mt-2 text-[#1a1a1a]">Ya sea en la plataforma o en la app móvil, Esta es la solución en la nube esencial para centralizar la transparencia y la comunicación con tus colaboradores, pues permite a tus colaboradores descargar su CFDI, actualizar datos y registrar su asistencia con geolocalización, optimizando la gestión de nómina y asistencia, fomentando el autoservicio y asegurando la claridad en cada proceso.</p>
+    </div>
+
+    <aside>
+      <h3 class="font-semibold mb-2">Video relacionado</h3>
+      <iframe class="iframe-video"
+      iframe width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/yIpMQoDyioY?si=bO-h7Td87lhz-8bZ" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+      </div>
+    </aside>
+
+    <a class="boton" href="folletos/Folleto Colabora.pdf" target="_blank" rel="noopener noreferrer">
+  Abrir Folleto
+</a>
+
+<style>
+  .boton {
+    background: #25398f;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    position: absolute;
+    right: 450px;
+    top: 4%;
+    transform: translateY(1000%);
+  }
+  .boton:hover { 
+    background: #3b5ae6;
+    }
+</style>
+  </main>
+  </main>
+
+</body>
+</html>
